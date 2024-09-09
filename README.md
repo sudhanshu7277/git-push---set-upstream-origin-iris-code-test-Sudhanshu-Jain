@@ -15,6 +15,8 @@ Navigate to api folder with cmd: `cd api`
 Install packages: `npm install`
 Run api (back end): `npm run start`
 
+added cors in the api package json as dependency to resolve CORS error, when fetching subdivisions data on the front end.
+
 Check the api is up and running by using:
 `curl http://localhost:3000/v1/subdivisions`
 
@@ -51,31 +53,45 @@ The test is broken down into three parts.
 -----------------------------------------------
 
 Expectation --
+--------------
 The first part of this test requires you to retrieve the subdivision data from the api and display it in 
 the angular application. This can be displayed in any way you so choose and any third party libraries can
 be chosen to aid in this. You can see the structure of the subdivision data in the api/src/subdivision.json
 file. Note: the data set contains around 1598 subdivision records so you may need to think about how that is 
 displayed (e.g pagination, infinite scrolling etc).
 
-response -- 
+Response --
+--------------
 Fetching the 1598 subdivision records from api and displaying the required and most relevent information fields on the UI, Using pagination by limiting the number of records to 25 per page. 
 fields displayed in the table (Title, Territory Name, location, Country, Community - if value available, Sub Division Status Code and Near map image date). Added some styles 
 
 ### Part 2
-expected --
+Expectation --
+--------------
  Give the user the ability to filter the data based on subdivisionDataCode (This can be either Active, Future 
  or Builtout (See Glossary). Also, allow the user to sort the data based on subdivision name or nearMapImageDate.
  filtering the records by subdivisionDataCode, filtering keys - (Active, Future, Builtout)
 
- response --
+Response --
+--------------
  The date can be filtered by subdivisionDataCode, filtering keys - (Active, Future, Builtout) with the help of the input with placeholder (Type to filter by sub division Status Code..)
 
 ### Part 3
+Expectation --
+---------------
 
 Finally, write some unit tests for the code that has been written. If you start to run out of time at this point
 then just attempt one test and write some comments about what other tests you would've written. Angular comes
 with Jasmine packaged with it so it is preferred that you use this framework however if you are low on time and
 are more comfortable with another testing framework (e.g Jest).
+
+Response --
+------------
+
+Written unit tests with jest, tested : 
+1) app component
+2) header component
+3) API service, using Mock data and fetching data from node service.
 
 ## Glossary
 
