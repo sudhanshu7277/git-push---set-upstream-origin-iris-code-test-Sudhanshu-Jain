@@ -1,0 +1,15 @@
+.thead-row {
+    border: 1.2px solid grey;
+}
+
+.cursorStyle {
+    cursor: pointer;
+}
+
+.displayFormDivInline {
+    display: inline;
+}   
+
+.floatButtonToRight {
+    float: right;
+}
