@@ -18,7 +18,7 @@ Run api (back end): `npm run start`
 added cors in the api package json as dependency to resolve CORS error, when fetching subdivisions data on the front end.
 
 Check the api is up and running by using:
-`curl http://localhost:3000/v1/subdivisions`
+`http://localhost:3000/v1/subdivisions`
 
 ### Angular app Setup
 ---------------------
